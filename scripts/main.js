@@ -69,3 +69,4 @@ $("#pagina").on("pageshow" , function() {
 			);		
 	});
 });
+
