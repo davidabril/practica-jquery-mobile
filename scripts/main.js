@@ -8,7 +8,7 @@ $("#pagina").on("pageshow" , function() {
 		$('.notafinal').html(parseFloat($('#notafin1').val())
 			+parseFloat($('#notafin2').val())
 			+parseFloat($('#notafin3').val())
-			);
+			); 
 	});
 	$('#nota12').on('change', function() { 
 		$('#notafin1').val(parseFloat($('#nota11').val())
