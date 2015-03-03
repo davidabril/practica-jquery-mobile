@@ -17,17 +17,17 @@
     </div>
     <div data-role="content">
         <div data-role="fieldcontain">
-            <label for="name">Login:</label>
-            <input type="text" name="name" id="name" value=""  />
+            <label for="nombre">Login:</label>
+            <input type="text" name="nombre" id="nombre" value=""  />
         </div> 
 
         <div data-role="fieldcontain">
             <label for="password">Password:</label>
             <input type="password" name="password" id="password" value=""  />
         </div>  
-       <a href="#alumnos" data-role="button" data-icon="check" data-inline="true" data-theme="d">Acceder</a> 
+       <!--<a href="#alumnos" name="entrar" id="entrar" data-role="button" data-icon="check" data-inline="true" data-theme="d" data-transition="pop">Acceder</a> -->
+       <input type="submit" id="enviame" data-inline="true" value="Acceder" data-icon="home"/>
     </div>
-
     <div data-role="footer" data-theme="d">
        <h4>Practica jquery mobile - David Abril Pérez</h4>
     </div>
@@ -69,7 +69,7 @@
                         <option value="10">Mireia Tarrago Alonso</option>
                     </select>            
             </div> 
-       <a href="#page1" data-role="button" data-icon="home" data-inline="true" data-theme="d">Comenzar a evaluzar</a> 
+       <a href="#page1" data-role="button" data-icon="home" data-inline="true" data-theme="d" data-transition="fade">Comenzar a evaluzar</a> 
     </div>
     <div data-role="footer" data-theme="d">
        <h4>Practica jquery mobile - David Abril Pérez</h4>
@@ -81,14 +81,14 @@
 <!--Pagina de valoracion, pestaña de contenido-->
 <div data-role="page" id="page1">   
     <div data-role="header" data-theme="d">
-        <a href="#cancelar" data-icon="delete"  data-role="button" data-theme="a" data-rel="dialog">Cancelar</a>
+        <a href="#cancelar" data-icon="delete"  data-role="button" data-theme="a" data-rel="dialog" data-transition="flip">Cancelar</a>
             <h1>Valoración del proyecto</h1>
-        <a href="#guardar" data-icon="check" data-role="button" data-theme="a" data-rel="dialog">Guardar</a>
+        <a href="#guardar" data-icon="check" data-role="button" data-theme="a" data-rel="dialog" data-transition="turn">Guardar</a>
         <div data-role="navbar" data-theme="d">
             <ul>
-                <li><a href="#page1" class="ui-btn-active ui-state-persist">Contenido (6,5 pts)</a></li>
-                <li><a href="#page2">Calidad (1 pts)</a></li>
-                <li><a href="#page3">Expresion (2,5 pts)</a></li>
+                <li><a href="#page1" class="ui-btn-active ui-state-persist" data-transition="flow">Contenido (6,5 pts)</a></li>
+                <li><a href="#page2" data-transition="flow">Calidad (1 pts)</a></li>
+                <li><a href="#page3" data-transition="flow">Expresion (2,5 pts)</a></li>
             </ul>
         </div>
     </div>
@@ -160,14 +160,14 @@
 <!--Pagina de valoracion, pestaña de calidad-->
 <div data-role="page" id="page2">
    <div data-role="header" data-theme="d">
-        <a href="#cancelar" data-icon="delete"  data-role="button" data-theme="a" data-rel="dialog">Cancelar</a>
+        <a href="#cancelar" data-icon="delete"  data-role="button" data-theme="a" data-rel="dialog" data-transition="slidefade">Cancelar</a>
             <h1>Valoración de la calidad de la presentación</h1>
-        <a href="#guardar" data-icon="check" data-role="button" data-theme="a" data-rel="dialog">Guardar</a>
+        <a href="#guardar" data-icon="check" data-role="button" data-theme="a" data-rel="dialog" data-transition="slide">Guardar</a>
         <div data-role="navbar" data-theme="d">
             <ul>
-                <li><a href="#page1">Contenido (6,5 pts)</a></li>
-                <li><a href="#page2" class="ui-btn-active ui-state-persist">Calidad (1 pts)</a></li>
-                <li><a href="#page3">Expresion (2,5 pts)</a></li>
+                <li><a href="#page1" data-transition="slideup">Contenido (6,5 pts)</a></li>
+                <li><a href="#page2" class="ui-btn-active ui-state-persist" data-transition="slideup">Calidad (1 pts)</a></li>
+                <li><a href="#page3" data-transition="slideup">Expresion (2,5 pts)</a></li>
             </ul>
         </div>
     </div>
@@ -196,14 +196,14 @@
 <!--Pagina de valoracion, pestaña de expresion-->
 <div data-role="page" id="page3">
    <div data-role="header" data-theme="d">
-        <a href="#cancelar" data-icon="delete"  data-role="button" data-theme="a" data-rel="dialog">Cancelar</a>
+        <a href="#cancelar" data-icon="delete"  data-role="button" data-theme="a" data-rel="dialog" data-transition="slidedown">Cancelar</a>
         <h1>Expresión oral</h1>
         <a href="#guardar" data-icon="check" data-role="button" data-theme="a" data-rel="dialog">Guardar</a>
         <div data-role="navbar" data-theme="d">
             <ul>
-                <li><a href="#page1">Contenido (6,5 pts)</a></li>
-                <li><a href="#page2">Calidad (1 pts)</a></li>
-                <li><a href="#page3" class="ui-btn-active ui-state-persist">Expresion (2,5 pts)</a></li>
+                <li><a href="#page1" data-transition="fade">Contenido (6,5 pts)</a></li>
+                <li><a href="#page2" data-transition="fade">Calidad (1 pts)</a></li>
+                <li><a href="#page3" class="ui-btn-active ui-state-persist" data-transition="fade">Expresion (2,5 pts)</a></li>
             </ul>
         </div>
     </div>
