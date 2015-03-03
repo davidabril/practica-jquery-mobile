@@ -1,0 +1,322 @@
+<html> 
+<head> 
+    <title>Practica jquery mobile - David Abril Pérez</title>     
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.css" />
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.js"></script>
+</head>
+<body id="pagina"> 
+
+
+<!--Pagina inicial-->
+<div data-role="page" id="acceder">
+    <div data-role="header" data-theme="d">
+       <p>Formulario de acceso</p>
+    </div>
+    <div data-role="content">
+        <div data-role="fieldcontain">
+            <label for="name">Login:</label>
+            <input type="text" name="name" id="name" value=""  />
+        </div> 
+
+        <div data-role="fieldcontain">
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" value=""  />
+        </div>  
+       <a href="#alumnos" data-role="button" data-icon="check" data-inline="true" data-theme="d">Acceder</a> 
+    </div>
+
+    <div data-role="footer" data-theme="d">
+       <h4>Practica jquery mobile - David Abril Pérez</h4>
+    </div>
+</div>
+<!--Fin Pagina inicial-->
+
+
+<!--Pagina seleccion curso y alumno-->
+<div data-role="page" id="alumnos">
+    <div data-role="header" data-theme="d">
+       <p>Selección del Curso y alumno</p>
+    </div>
+    <div data-role="content">
+            <div data-role="fieldcontain">                   
+               <label for="curso" class="select">Curso:</label>
+                   <select name="curso" id="curso">
+                        <option value="" default="default">Seleccione un módulo</option>
+                        <optgroup label="Grado Medio">
+                            <option value="smr">ISMR - Sistemas Microinformáticos y Redes</option>
+                        </optgroup>
+                        <optgroup label="Grado Superior">
+                            <option value="asir">ASIR - Administración de Sistemas Infromáticos en Red</option>                                    
+                            <option value="dam">DAM - Desarrollo de Aplicaciones Multiplataforma</option>
+                            <option value="daw">DAW - Desarrollo de Aplicaciones Web</option>            
+                        </optgroup>
+                   </select>      
+                <label for="alumno" class="select">Alumno:</label>
+                    <select name="alumno" id="alumno" data-inline="true">
+                        <option value="" default="default">Seleccione un alumno</option>             
+                        <option value="1">Pancho Villa</option>
+                        <option value="2">Francisco Céspedes</option>
+                        <option value="3">Irina Curichevnko</option>
+                        <option value="4">Ignacio Cañaveras</option>
+                        <option value="5">Manuel Parada</option>
+                        <option value="6">Manuel Indalo</option>
+                        <option value="7">Alonso Carrera</option>
+                        <option value="8">Diamantina Dasilva</option>
+                        <option value="9">Olinda Carvallo</option>
+                        <option value="10">Mireia Tarrago Alonso</option>
+                    </select>            
+            </div> 
+       <a href="#page1" data-role="button" data-icon="home" data-inline="true" data-theme="d">Comenzar a evaluzar</a> 
+    </div>
+    <div data-role="footer" data-theme="d">
+       <h4>Practica jquery mobile - David Abril Pérez</h4>
+    </div>
+</div>
+<!--Fin pagina seleccion curso y alumno-->
+
+
+<!--Pagina de valoracion, pestaña de contenido-->
+<div data-role="page" id="page1">   
+    <div data-role="header" data-theme="d">
+        <a href="#cancelar" data-icon="delete"  data-role="button" data-theme="a" data-rel="dialog">Cancelar</a>
+            <h1>Valoración del proyecto</h1>
+        <a href="#guardar" data-icon="check" data-role="button" data-theme="a" data-rel="dialog">Guardar</a>
+        <div data-role="navbar" data-theme="d">
+            <ul>
+                <li><a href="#page1" class="ui-btn-active ui-state-persist">Contenido (6,5 pts)</a></li>
+                <li><a href="#page2">Calidad (1 pts)</a></li>
+                <li><a href="#page3">Expresion (2,5 pts)</a></li>
+            </ul>
+        </div>
+    </div>
+    <div data-role="content">
+    <h1>Valoración del contenido</h1>
+    <div data-role="collapsible-set">
+        <div data-role="collapsible" data-theme="d" data-collapsed="false">
+            <h3>Planteamiento</h3>
+            <div data-role="fieldcontain">
+                    <input type="checkbox" name="objetivos" id="objetivos" class="custom" data-mini="true" data-theme="d"/>
+                    <label for="objetivos">- Objetivos</label>
+                    <input type="checkbox" name="recursos" id="recursos" class="custom" data-mini="true" data-theme="d"/>
+                    <label for="recursos">- Recursos utilizados</label>
+                    <input type="checkbox" name="destinatarios" id="destinatarios" class="custom" data-mini="true" data-theme="d"/>
+                    <label for="destinatarios">- Destinatarios</label>
+                    <input type="checkbox" name="justificacion" id="justificacion" class="custom" data-mini="true" data-theme="d"/>
+                    <label for="justificacion">- Justificación del proyecto</label>
+                <div data-role="fieldcontain">
+                    <label for="slider-3">Nota del planteamiento:</label>
+                    <input style="width:75px" width="35px" type="range" step="0.1" name="nota11" id="nota11" value="0.0" min="0.0" max="2.0" data-theme="c" data-track-theme="b" />
+                </div>
+            </div>
+        </div>
+        <div data-role="collapsible" data-theme="d">
+            <h3>Contenido</h3>
+            <div data-role="fieldcontain">          
+                    <input type="checkbox" name="metodologia" id="metodologia" class="custom" data-mini="true" data-theme="d"/>
+                    <label for="metodologia">- Metodología seguida</label>
+                    <input type="checkbox" name="claridad" id="claridad" class="custom" data-mini="true" data-theme="d"/>
+                    <label for="claridad">- Claridad</label>
+                    <input type="checkbox" name="actividades" id="actividades" class="custom" data-mini="true" data-theme="d"/>
+                    <label for="actividades">- Actividades o acciones realizadas</label>
+                    <input type="checkbox" name="documentacion" id="documentacion" class="custom" data-mini="true" data-theme="d"/>
+                    <label for="documentacion">- Documentación elaborada</label>
+                <div data-role="fieldcontain">
+                    <label for="slider-3">Nota del contenido:</label>
+                    <input style="width:75px" width="35px" type="range" step="0.1" name="nota12" id="nota12" value="0.0" min="0.0" max="2.0" data-theme="c" data-track-theme="b" />
+                </div>
+            </div>
+        </div>
+        <div data-role="collapsible" data-theme="d">
+            <h3>Resultados obtenidos</h3>
+            <div data-role="fieldcontain">
+                    <input type="checkbox" name="conclusiones" id="conclusiones" class="custom" data-mini="true" data-theme="d"/>
+                    <label for="conclusiones">- Conclusiones</label>
+                    <input type="checkbox" name="conseguidos" id="conseguidos" class="custom" data-mini="true" data-theme="d"/>
+                    <label for="conseguidos">- Objetivos conseguidos</label>
+                    <input type="checkbox" name="consecucion" id="consecucion" class="custom" data-mini="true" data-theme="d"/>
+                    <label for="consecucion">- Grado de consecución</label>
+                <div data-role="fieldcontain">
+                    <label for="slider-3">Nota resultados  obtenidos:</label>
+                    <input style="width:75px" width="35px" type="range" step="0.1" name="nota13" id="nota13" value="0.0" min="0.0" max="2.5" data-theme="c" data-track-theme="b" />
+                </div>
+            </div>
+        </div> 
+        <div data-role="fieldcontain">
+            <label for="slider-3">Nota final del contenido:</label>
+            <input style="width:75px" width="35px" type="range" step="0.1" name="notafin1" id="notafin1" value="0.0" min="0.0" max="6.5" data-theme="a" data-track-theme="a" />
+        </div>       
+    </div>
+    </div>     
+    <div data-role="footer" data-theme="d">
+       <h4>Practica jquery mobile - David Abril Pérez</h4>
+    </div>
+</div>
+<!--Fin pagina de valoracion, pestaña de contenido-->
+
+
+<!--Pagina de valoracion, pestaña de calidad-->
+<div data-role="page" id="page2">
+   <div data-role="header" data-theme="d">
+        <a href="#cancelar" data-icon="delete"  data-role="button" data-theme="a" data-rel="dialog">Cancelar</a>
+            <h1>Valoración de la calidad de la presentación</h1>
+        <a href="#guardar" data-icon="check" data-role="button" data-theme="a" data-rel="dialog">Guardar</a>
+        <div data-role="navbar" data-theme="d">
+            <ul>
+                <li><a href="#page1">Contenido (6,5 pts)</a></li>
+                <li><a href="#page2" class="ui-btn-active ui-state-persist">Calidad (1 pts)</a></li>
+                <li><a href="#page3">Expresion (2,5 pts)</a></li>
+            </ul>
+        </div>
+    </div>
+    <div data-role="content">    
+        <h1>Valoración de la calidad</h1>
+        <div data-role="fieldcontain">
+                <input type="checkbox" name="presentacion" id="presentacion" class="custom" data-mini="true" data-theme="d"/>
+                <label for="presentacion">- Presentación escrita</label>
+                <input type="checkbox" name="redaccion" id="redaccion" class="custom" data-mini="true" data-theme="d"/>
+                <label for="redaccion">- Redacción y claridad del texto</label>
+                <input type="checkbox" name="organizacion" id="organizacion" class="custom" data-mini="true" data-theme="d"/>
+                <label for="organizacion">- Organización del contenido</label>
+            <div data-role="fieldcontain">
+                <label for="slider-3">Nota final de la calidad:</label>
+                <input style="width:75px" width="35px" type="range" step="0.1" name="notafin2" id="notafin2" value="0.0" min="0.0" max="1.0" data-theme="a" data-track-theme="a" />
+            </div>  
+        </div>                 
+    </div>
+    <div data-role="footer" data-theme="d">
+       <h4>Practica jquery mobile - David Abril Pérez</h4>
+    </div>
+</div>
+<!--Fin pagina de valoracion, pestaña de calidad-->
+
+
+<!--Pagina de valoracion, pestaña de expresion-->
+<div data-role="page" id="page3">
+   <div data-role="header" data-theme="d">
+        <a href="#cancelar" data-icon="delete"  data-role="button" data-theme="a" data-rel="dialog">Cancelar</a>
+        <h1>Expresión oral</h1>
+        <a href="#guardar" data-icon="check" data-role="button" data-theme="a" data-rel="dialog">Guardar</a>
+        <div data-role="navbar" data-theme="d">
+            <ul>
+                <li><a href="#page1">Contenido (6,5 pts)</a></li>
+                <li><a href="#page2">Calidad (1 pts)</a></li>
+                <li><a href="#page3" class="ui-btn-active ui-state-persist">Expresion (2,5 pts)</a></li>
+            </ul>
+        </div>
+    </div>
+    <div data-role="content">      
+            <div data-role="collapsible" data-theme="d" data-collapsed="false">
+                <h3>Generales</h3>   
+                <div data-role="fieldcontain">
+                    <input type="checkbox" name="entrada" id="entrada" class="custom" data-mini="true" data-theme="d"/>
+                    <label for="entrada">- Entrada del alumno</label>
+                    <input type="checkbox" name="indumentaria" id="indumentaria" class="custom" data-mini="true" data-theme="d"/>
+                    <label for="indumentaria">- Indumentaria</label>
+                    <input type="checkbox" name="introduccion" id="introduccion" class="custom" data-mini="true" data-theme="d"/>
+                    <label for="introduccion">- Introducción: ¿Es atractiva? ¿Queda claro el proyecto?</label>
+                    <input type="checkbox" name="desarrollo" id="desarrollo" class="custom" data-mini="true" data-theme="d"/>
+                    <label for="desarrollo">- Desarrollo: Orden en las ideas. Claridad en la exposición. Aclaración de términos técnicos</label>
+                    <input type="checkbox" name="conclusion" id="conclusion" class="custom" data-mini="true" data-theme="d"/>
+                    <label for="conclusion">- Conclusión: ¿Queda claro el objetivo del proyecto? ¿Lo vende bien?</label>
+                    <input type="checkbox" name="seguridad" id="seguridad" class="custom" data-mini="true" data-theme="d"/>
+                    <label for="seguridad">- Seguridad en lo que expone. La presentación está trabajada</label>
+                    <input type="checkbox" name="entusiasmo" id="entusiasmo" class="custom" data-mini="true" data-theme="d"/>
+                    <label for="entusiasmo">- Entusiasmo en lo que expone</label>
+                    <input type="checkbox" name="duracion" id="duracion" class="custom" data-mini="true" data-theme="d"/>
+                    <label for="duracion">- Duración: ¿Se adecua a lo estipulado?</label>
+                    <input type="checkbox" name="atencion" id="atencion" class="custom" data-mini="true" data-theme="d"/>
+                    <label for="atencion">- Atención del público: ¿Logra atraer la atención del público?</label>
+                    <input type="checkbox" name="preguntas" id="preguntas" class="custom" data-mini="true" data-theme="d"/>
+                    <label for="preguntas">- Preguntas realizadas: ¿Responde de forma coherente?</label>                  
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="slider-3">Nota expresión general:</label>
+                    <input style="width:75px" width="35px" type="range" step="0.1" name="nota31" id="nota31" value="0.0" min="0.0" max="1.5" data-theme="c" data-track-theme="b" />
+                </div>
+            </div>  
+                <div data-role="collapsible" data-theme="d" data-collapsed="true">
+                    <h3>Expresión oral</h3>
+                    <div data-role="fieldcontain">
+                        <input type="checkbox" name="entonacion" id="entonacion" class="custom" data-mini="true" data-theme="d"/>
+                        <label for="entonacion">- Entonación</label>
+                        <input type="checkbox" name="volumen" id="volumen" class="custom" data-mini="true" data-theme="d"/>
+                        <label for="volumen">- Volumen</label>
+                        <input type="checkbox" name="velocidad" id="velocidad" class="custom" data-mini="true" data-theme="d"/>
+                        <label for="velocidad">- Velocidad</label>
+                        <input type="checkbox" name="presentacion" id="presentacion" class="custom" data-mini="true" data-theme="d"/>
+                        <label for="presentacion">- Vacilación en la voz</label>
+                        <input type="checkbox" name="pausas" id="pausas" class="custom" data-mini="true" data-theme="d"/>
+                        <label for="pausas">- Pausas</label>
+                        <input type="checkbox" name="muletillas" id="muletillas" class="custom" data-mini="true" data-theme="d"/>
+                        <label for="muletillas">- Utilización de muletillas</label>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="slider-3">Nota expresión oral:</label>
+                        <input style="width:75px" width="35px" type="range" step="0.1" name="nota32" id="nota32" value="0.0" min="0.0" max="0.5" data-theme="c" data-track-theme="b" />
+                    </div>
+                </div>    
+                <div data-role="collapsible" data-theme="d" data-collapsed="true">
+                    <h3>Lenguaje no verbal</h3>
+                    <div data-role="fieldcontain">
+                        <input type="checkbox" name="mirada" id="mirada" class="custom" data-mini="true" data-theme="d"/>
+                        <label for="mirada">- Mirada: ¿dirige la mirada a todo el auditorio?</label>
+                        <input type="checkbox" name="sonrisa" id="sonrisa" class="custom" data-mini="true" data-theme="d"/>
+                        <label for="sonrisa">- Sonrisa/expresión facial positiva</label>
+                        <input type="checkbox" name="posicion" id="posicion" class="custom" data-mini="true" data-theme="d"/>
+                        <label for="posicion">- Posición correcta del cuerpo</label>
+                        <input type="checkbox" name="tics" id="tics" class="custom" data-mini="true" data-theme="d"/>
+                        <label for="tics">- Tics, gestos nerviosos</label>
+                    </div> 
+                    <div data-role="fieldcontain">
+                        <label for="slider-3">Nota lenguaje no verbal:</label>
+                        <input style="width:75px" width="35px" type="range" step="0.1" name="nota33" id="nota33" value="0.0" min="0.0" max="0.5" data-theme="c" data-track-theme="b" />
+                    </div>                       
+                </div>   
+            <div data-role="fieldcontain">
+                <label for="slider-3">Nota final de la expresión:</label>
+                <input style="width:75px" width="35px" type="range" step="0.1" name="notafin3" id="notafin3" value="0.0" min="0.0" max="2.5" data-theme="a" data-track-theme="a" />
+            </div>  
+        </div>      
+    <div data-role="footer" data-theme="d">
+       <h4>Practica jquery mobile - David Abril Pérez</h4>
+    </div>
+</div>
+<!-- Fin pagina de valoracion, pestaña de expresion-->
+
+
+<!-- Pagina para boton de guardar evaluacion-->
+<div data-role="page" id="guardar">
+    <div data-role="header">        
+        <h1>Información</h1>        
+    </div>
+    <div data-role="content">
+        <h1>Nota final <span class="notafinal"></span></h1>
+        <h2>Evaluación del alumno guardada</h2>
+        <p>¿Desea continuar?</p>
+        <a data-role="button" data-icon="forward" data-theme="a" data-rel="back" data-shadow="true"d>Continuar</a>
+        <a data-role="button" data-icon=#page1&ui-state=dialog"back" data-theme="a" href="#acceder" data-shadow="true">Salir al login</a>    
+    </div>
+</div>
+<!--Fin de pagina para guardar evaluacion-->
+
+
+<!-- Pagina para boton de cancelar-->
+<div data-role="page" id="cancelar">
+    <div data-role="header">
+        <h1>Eliminar</h1>        
+    </div>
+    <div data-role="content">
+        <p> ¿Está seguro de que desea eliminar la corección en curso?</p>       
+        <a data-role="button" data-icon="check" data-theme="a" href="#acceder">Sí</a>
+        <a data-role="button" data-icon="back" data-theme="a" data-rel="back">No</a>
+    </div>
+</div>
+<!-- Jquery para controlar los cambios de valores en la nota -->
+<script src="scripts/main.js"></script>
+<!-- Fin carga jquery principal -->
+</body>
+</html>
+<!--Fin de pagina para cancelar la edición-->
